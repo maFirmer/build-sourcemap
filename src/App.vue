@@ -4,7 +4,10 @@ import { onMounted } from "vue";
 // 构造一个错误
 
 onMounted(() => {
-  throw new Error("This is an error");
+  const errNum = null;
+  if (errNum.length > 3) {
+    console.log("errnum 是一个错误的变量");
+  }
 });
 </script>
 
