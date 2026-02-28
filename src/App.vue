@@ -6,7 +6,7 @@ import { onMounted } from "vue";
 onMounted(() => {
   const errNum = null;
   if (errNum.length > 3) {
-    console.log("errnum 是一个错误的变量");
+    console.log("errnum 是一个错误的测试");
   }
 });
 </script>
