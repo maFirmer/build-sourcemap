@@ -8,7 +8,7 @@ const preview = () => {
   const originCodeLine = props.originSource?.source.split("\n");
   const len = originCodeLine?.length;
   const start = line - 5 >= 0 ? line - 5 : 0;
-  const end = line + 5 > len ? len : line + 5;
+  const end = line + 5 >= len ? len : start + 5;
 
   console.log(props?.originSource);
   for (let i = start; i < end; i++) {
