@@ -7,8 +7,8 @@ const preview = () => {
   const newLine = [];
   const originCodeLine = props.originSource?.source.split("\n");
   const len = originCodeLine?.length;
-  const start = line - 3 >= 0 ? line - 3 : 0;
-  const end = line + 5 < len ? len : line + 5;
+  const start = line - 5 >= 0 ? line - 5 : 0;
+  const end = line + 5 > len ? len : line + 5;
 
   for (let i = start; i < end; i++) {
     const content = i + 1 + ".  " + encodeHtml(originCodeLine[i]);
