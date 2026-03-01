@@ -9,16 +9,17 @@ const errData = ref<any | null>(null);
 const isOpenLayer = ref(false);
 const tabActiveName = ref("local");
 
+const js_err_data = localStorage.getItem("js_err_data");
+if (js_err_data) {
+  errData.value = JSON.parse(js_err_data);
+}
+
 // 当前点击错误信息记录
 const currentErrorMap = {
   columnNumber: 0,
   lineNumber: 0,
   index: 0,
 };
-const js_err_data = localStorage.getItem("js_err_data");
-if (js_err_data) {
-  errData.value = JSON.parse(js_err_data);
-}
 
 const openLayer = async (item: any, index: number | string) => {
   isOpenLayer.value = true;

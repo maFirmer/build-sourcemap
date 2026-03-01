@@ -8,7 +8,7 @@ const preview = () => {
   const originCodeLine = props.originSource?.source.split("\n");
   const len = originCodeLine?.length;
   const start = line - 5 >= 0 ? line - 5 : 0;
-  const end = line >= len ? len : start + 7;
+  const end = line >= len ? len : start + 9;
 
   for (let i = start; i < end; i++) {
     let lineNumber = i + 1;
