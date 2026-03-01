@@ -7,28 +7,23 @@ const props = defineProps<{
   };
 }>();
 const preview = async () => {
-  console.log(props.originSource);
   const line = props.originSource?.line;
-  const column = props.originSource?.column;
   const newLine = [];
   const originCodeLine = props.originSource?.source.split("\n");
+  const len = originCodeLine?.length;
+  const start = line - 3 >= 0 ? line - 3 : 0;
+  const end = line + 5 < len ? len : line + 5;
 
-  for (let i = 0; i < originCodeLine.length; i++) {
-    if (i === line - 1) {
-      newLine.push(
-        `<span class="line-number">${i + 1}</span><span class="line-code">${
-          originCodeLine[i]
-        }</span>`
-      );
-    } else {
-      newLine.push(
-        `<span class="line-number">${i + 1}</span><span class="}
-        />`
-      );
-    }
+  for (let i = start; i < end; i++) {
+    const content = i + 1 + ".  " + encodeHtml(originCodeLine[i]);
+    newLine.push(`<div class="line ${i + 1 == line ? "err_code" : ""}">${content}</div>`);
   }
 
-  return `<div class="preview-code">${newLine.join("")}</div>`;
+  return newLine.join("");
+};
+const encodeHtml = (str: string) => {
+  if (!str || str.length == 0) return "";
+  return str.replace(/</g, "&lt;").replace(/>/g, "&gt;");
 };
 </script>
 
@@ -38,4 +33,9 @@ const preview = async () => {
     <template v-html="preview()"></template>
   </div>
 </template>
-<style></style>
+<style>
+.err_code {
+  color: antiquewhite;
+  background-color: red;
+}
+</style>
