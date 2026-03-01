@@ -8,11 +8,11 @@ const preview = () => {
   const originCodeLine = props.originSource?.source.split("\n");
   const len = originCodeLine?.length;
   const start = line - 5 >= 0 ? line - 5 : 0;
-  const end = line + 5 >= len ? len : start + 5;
+  const end = line >= len ? len : start + 7;
 
   for (let i = start; i < end; i++) {
-    const lineNumber = i + 1;
-    const content = `${lineNumber} ".  " ${encodeHtml(originCodeLine[i])}`;
+    let lineNumber = i + 1;
+    const content = `${lineNumber}. ${encodeHtml(originCodeLine[i])}`;
     newLine.push(
       `<div class="line ${lineNumber == line ? "err_code" : ""}">${content}</div>`
     );
