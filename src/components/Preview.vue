@@ -12,7 +12,8 @@ const preview = () => {
 
   for (let i = start; i < end; i++) {
     let lineNumber = i + 1;
-    const content = `${lineNumber}. ${encodeHtml(originCodeLine[i])}`;
+    const content = `${lineNumber}. ${encodeHtml(originCodeLine?.[i])}`;
+
     newLine.push(
       `<div class="line ${lineNumber == line ? "err_code" : ""}">${content}</div>`
     );
