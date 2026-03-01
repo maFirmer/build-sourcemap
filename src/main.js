@@ -2,7 +2,8 @@ import { createApp } from 'vue'
 import { createPinia } from 'pinia' 
 import ErrorStackParser from 'error-stack-parser'
 import {getErrorCodeFromgetSourcemap } from './common/index'
-import './style.css'
+import ElementPlus from 'element-plus'
+import 'element-plus/dist/index.css'
 import App from './App.vue'
 import router from './router'
 
@@ -13,11 +14,21 @@ const app = createApp(App);
 app.config.errorHandler = (err,vm) => {
 
     const errorStack = ErrorStackParser.parse(err);
-    getErrorCodeFromgetSourcemap(errorStack[0])
-    console.log(err);
+
+    const js_err_data ={
+        name: err.name,
+        message: err.message,
+        stack: err.stack,
+        err_stack_list: errorStack
+    }
+    localStorage.setItem('js_err_data',JSON.stringify(js_err_data))
+
+    // getErrorCodeFromgetSourcemap(errorStack[0])
+ 
 }
 
-
-app.use(pinia) 
-app.use(router)
-app.mount('#app')
+app
+.use(ElementPlus)
+.use(pinia)
+.use(router)
+.mount('#app')

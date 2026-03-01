@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "axios": "^1.13.6",
+    "element-plus": "^2.13.3",
     "error-stack-parser": "2.0.6",
     "pinia": "^3.0.4",
     "source-map-js": "^1.2.1",

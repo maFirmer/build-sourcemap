@@ -1,15 +1,4 @@
-<script setup>
-import { onMounted } from "vue";
-
-// 构造一个错误
-
-onMounted(() => {
-  const errNum = null;
-  if (errNum.length > 3) {
-    console.log("errnum 是一个错误的测试");
-  }
-});
-</script>
+<script setup></script>
 
 <template>
   <div class="container">
@@ -19,6 +8,9 @@ onMounted(() => {
     <div>
       <router-link to="/about">About</router-link>
     </div>
+    <div>
+      <router-link to="/sourcemap">sourcemap</router-link>
+    </div>
   </div>
   <router-view></router-view>
 </template>
@@ -27,7 +19,7 @@ onMounted(() => {
 .container {
   display: flex;
 
-  justify-content: space-between;
+  justify-content: center;
 }
 .container div {
   margin: 10px;
