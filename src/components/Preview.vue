@@ -1,9 +1,13 @@
 <script setup lang="ts">
 const props = defineProps<{
-  originSource: any;
+  originSource: {
+    line: number;
+    column: number;
+    source: any;
+  };
 }>();
-console.log(props);
 const preview = async () => {
+  console.log(props.originSource);
   const line = props.originSource?.line;
   const column = props.originSource?.column;
   const newLine = [];
