@@ -24,7 +24,11 @@ app.config.errorHandler = (err,vm) => {
         err_stack_list: errorStack
     }
     localStorage.setItem('js_err_data',JSON.stringify(js_err_data))
-    vm.$message.error(`触发错误：${err.message}`)
+    vm.$message({
+        type: 'error',
+        message: err.message,
+        duration:1000
+    })
     // getErrorCodeFromgetSourcemap(errorStack[0])
  
 }

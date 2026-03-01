@@ -21,7 +21,7 @@ const preview = () => {
   return newLine.join("");
 };
 const encodeHtml = (str: string) => {
-  if (!str || str.length == 0) return "";
+  if (!str || str?.length == 0) return "";
   return str.replace(/</g, "&lt;").replace(/>/g, "&gt;");
 };
 </script>
