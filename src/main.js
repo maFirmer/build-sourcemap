@@ -24,7 +24,7 @@ app.config.errorHandler = (err,vm) => {
         err_stack_list: errorStack
     }
     localStorage.setItem('js_err_data',JSON.stringify(js_err_data))
-    vm.$ElMessage(`触发错误：${err.message}`)
+    vm.$messagee.eror(`触发错误：${err.message}`)
     // getErrorCodeFromgetSourcemap(errorStack[0])
  
 }
