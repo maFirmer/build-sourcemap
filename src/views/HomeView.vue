@@ -39,6 +39,9 @@ const beforeSourcemapUpload = async (file: any) => {
       currentErrorMap.lineNumber,
       currentErrorMap.columnNumber
     );
+
+    console.log(originSource);
+
     // 添加源码到errData
     errData.value.err_stack_list[currentErrorMap.index].originSource = originSource;
     isOpenLayer.value = false;

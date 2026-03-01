@@ -1,12 +1,8 @@
 <script setup lang="ts">
 const props = defineProps<{
-  originSource: {
-    line: number;
-    column: number;
-    source: any;
-  };
+  originSource: any;
 }>();
-const preview = async () => {
+const preview = () => {
   const line = props.originSource?.line;
   const newLine = [];
   const originCodeLine = props.originSource?.source.split("\n");
@@ -30,7 +26,7 @@ const encodeHtml = (str: string) => {
 <template>
   <div>
     <!-- <pre v-if="originSource">{{ originSource.source }}</pre> -->
-    <template v-html="preview()"></template>
+    <pre v-html="preview()"></pre>
   </div>
 </template>
 <style>
