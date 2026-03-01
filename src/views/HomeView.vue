@@ -1,9 +1,7 @@
 <script setup lang="ts">
 import { ElMessage } from "element-plus";
-import { computed, ref } from "vue";
-import { useRoute, useRouter } from "vue-router";
+import { ref } from "vue";
 import { SourceMapConsumer } from "source-map-js";
-
 import Preview from "../components/Preview.vue";
 
 const activeName = ref("0");

@@ -2,13 +2,12 @@
 const props = defineProps<{
   originSource: any;
 }>();
-
+console.log(props);
 const preview = async () => {
-  const { originSource } = props;
-  const line = originSource.line;
-  const column = originSource.column;
+  const line = props.originSource?.line;
+  const column = props.originSource?.column;
   const newLine = [];
-  const originCodeLine = originSource.source.split("\n");
+  const originCodeLine = props.originSource?.source.split("\n");
 
   for (let i = 0; i < originCodeLine.length; i++) {
     if (i === line - 1) {
@@ -31,6 +30,7 @@ const preview = async () => {
 
 <template>
   <div>
+    <!-- <pre v-if="originSource">{{ originSource.source }}</pre> -->
     <template v-html="preview()"></template>
   </div>
 </template>
