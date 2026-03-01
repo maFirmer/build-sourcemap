@@ -10,6 +10,7 @@ const preview = () => {
   const start = line - 5 >= 0 ? line - 5 : 0;
   const end = line + 5 > len ? len : line + 5;
 
+  console.log(props?.originSource);
   for (let i = start; i < end; i++) {
     const content = i + 1 + ".  " + encodeHtml(originCodeLine[i]);
     newLine.push(`<div class="line ${i + 1 == line ? "err_code" : ""}">${content}</div>`);
