@@ -11,12 +11,14 @@ const preview = () => {
   const end = line + 5 >= len ? len : start + 5;
 
   console.log(props?.originSource);
-  for (let i = start; i < end; i++) {
-    const content = i + 1 + ".  " + encodeHtml(originCodeLine[i]);
-    newLine.push(`<div class="line ${i + 1 == line ? "err_code" : ""}">${content}</div>`);
-  }
+  // for (let i = start; i < end; i++) {
+  //   const content = i + 1 + ".  " + encodeHtml(originCodeLine[i]);
+  //   newLine.push(`<div class="line ${i + 1 == line ? "err_code" : ""}">${content}</div>`);
+  // }
 
-  return newLine.join("");
+  // return newLine.join("");
+
+  return props.originSource?.source;
 };
 const encodeHtml = (str: string) => {
   if (!str || str.length == 0) return "";

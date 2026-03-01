@@ -39,9 +39,6 @@ const beforeSourcemapUpload = async (file: any) => {
       currentErrorMap.lineNumber,
       currentErrorMap.columnNumber
     );
-
-    console.log(originSource);
-
     // 添加源码到errData
     errData.value.err_stack_list[currentErrorMap.index].originSource = originSource;
     isOpenLayer.value = false;
@@ -49,14 +46,11 @@ const beforeSourcemapUpload = async (file: any) => {
 };
 const getSourcemap = (fileContent: any, lineNumber: number, columnNumber: number) => {
   const consumer = new SourceMapConsumer(JSON.parse(fileContent));
-
   const sourcemapPosition = consumer.originalPositionFor({
     line: lineNumber,
     column: columnNumber,
   });
-
   const originSource = consumer.sourceContentFor(sourcemapPosition.source);
-
   return {
     line: sourcemapPosition.line,
     column: sourcemapPosition.column,
@@ -68,8 +62,7 @@ const getSourcemap = (fileContent: any, lineNumber: number, columnNumber: number
 <template>
   <div>
     <pre> {{ errData.strack }}</pre>
-    <pre>--------------</pre>
-
+    <pre>------------------------------------------------------------------</pre>
     <el-collapse v-model="activeName" accordion>
       <el-collapse-item
         v-for="(item, index) in errData?.err_stack_list"
