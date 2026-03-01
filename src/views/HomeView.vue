@@ -4,6 +4,8 @@ import { computed, ref } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import { SourceMapConsumer } from "source-map-js";
 
+import Preview from "../components/Preview.vue";
+
 const activeName = ref("0");
 const errData = ref<any | null>(null);
 const isOpenLayer = ref(false);
@@ -40,8 +42,7 @@ const beforeSourcemapUpload = async (file: any) => {
       currentErrorMap.columnNumber
     );
     // 添加源码到errData
-    errData.value.err_stack_list[currentErrorMap.index].originSource =
-      originSource.source;
+    errData.value.err_stack_list[currentErrorMap.index].originSource = originSource;
     isOpenLayer.value = false;
   };
 };
@@ -82,9 +83,10 @@ const getSourcemap = (fileContent: any, lineNumber: number, columnNumber: number
           </el-col>
         </el-row>
         <el-row>
-          <template v-if="item.originSource">
-            <pre>{{ item.originSource }}</pre>
-          </template>
+          <!-- <template v-if="item.originSource">
+            <pre>{{ item.originSource.source }}</pre>
+          </template> -->
+          <Preview :originSource="item.originSource"></Preview>
         </el-row>
       </el-collapse-item>
     </el-collapse>
