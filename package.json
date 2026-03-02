@@ -9,6 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@rrweb/record": "2.0.0-alpha.20",
+    "@rrweb/replay": "2.0.0-alpha.20",
+    "@rrweb/types": "2.0.0-alpha.20",
     "axios": "^1.13.6",
     "element-plus": "^2.13.3",
     "error-stack-parser": "2.0.6",

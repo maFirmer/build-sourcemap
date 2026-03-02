@@ -44,6 +44,7 @@ const beforeSourcemapUpload = async (file: any) => {
     errData.value.err_stack_list[currentErrorMap.index].originSource = originSource;
     isOpenLayer.value = false;
   };
+  return false;
 };
 const getSourcemap = (fileContent: any, lineNumber: number, columnNumber: number) => {
   const consumer = new SourceMapConsumer(JSON.parse(fileContent));

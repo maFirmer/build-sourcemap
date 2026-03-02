@@ -8,6 +8,15 @@ importers:
 
   .:
     dependencies:
+      '@rrweb/record':
+        specifier: 2.0.0-alpha.20
+        version: 2.0.0-alpha.20
+      '@rrweb/replay':
+        specifier: 2.0.0-alpha.20
+        version: 2.0.0-alpha.20
+      '@rrweb/types':
+        specifier: 2.0.0-alpha.20
+        version: 2.0.0-alpha.20
       axios:
         specifier: ^1.13.6
         version: 1.13.6
@@ -374,8 +383,23 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@rrweb/record@2.0.0-alpha.20':
+    resolution: {integrity: sha512-marVOU3Lc285mwLCp+vI6M/eJ+wZ6lcTa7fX0zcdmBsM+j5loXmMQjkmIvkji5+lAbkq5/w2cwto3GS0TaCjtg==}
+
+  '@rrweb/replay@2.0.0-alpha.20':
+    resolution: {integrity: sha512-VodsLb+C2bYNNVbb0U14tKLa9ctzUxYIlt9VnxPATWvfyXHLTku8BhRWptuW/iIjVjmG49LBoR1ilxw/HMiJ1w==}
+
+  '@rrweb/types@2.0.0-alpha.20':
+    resolution: {integrity: sha512-RbnDgKxA/odwB1R4gF7eUUj+rdSrq6ROQJsnMw7MIsGzlbSYvJeZN8YY4XqU0G6sKJvXI6bSzk7w/G94jNwzhw==}
+
+  '@rrweb/utils@2.0.0-alpha.20':
+    resolution: {integrity: sha512-MTQOmhPRe39C0fYaCnnVYOufQsyGzwNXpUStKiyFSfGLUJrzuwhbRoUAKR5w6W2j5XuA0bIz3ZDIBztkquOhLw==}
+
   '@sxzz/popperjs-es@2.11.8':
     resolution: {integrity: sha512-wOwESXvvED3S8xBmcPWHs2dUuzrE4XiZeFu7e1hROIJkm02a49N120pmOXxY33sBb6hArItm5W5tcg1cBtV+HQ==}
+
+  '@types/css-font-loading-module@0.0.7':
+    resolution: {integrity: sha512-nl09VhutdjINdWyXxHWN/w9zlNCfr60JUqJbd24YXUuCwgeL0TpFSdElCwb6cxfB6ybE19Gjj4g0jsgkXxKv1Q==}
 
   '@types/estree@1.0.8':
     resolution: {integrity: sha512-dWHzHa2WqEXI/O1E9OjrocMTKJl2mSrEolh1Iomrv6U+JuNwaHXsXx9bLu5gG7BUWFIN0skIQJQ/L1rIex4X6w==}
@@ -446,6 +470,9 @@ packages:
   '@vueuse/shared@10.11.1':
     resolution: {integrity: sha512-LHpC8711VFZlDaYUXEBbFBCQ7GS3dVU9mjOhhMhXP6txTV4EhYQg/KGnQuvt/sPAtoUKq7VVUnL6mVtFoL42sA==}
 
+  '@xstate/fsm@1.6.5':
+    resolution: {integrity: sha512-b5o1I6aLNeYlU/3CPlj/Z91ybk1gUsKT+5NAJI+2W4UjvS5KLG28K9v5UvNoFVjHV8PajVZ00RH3vnjyQO7ZAw==}
+
   async-validator@4.2.5:
     resolution: {integrity: sha512-7HhHjtERjqlNbZtqNqy2rckN/SpOOlmDliet+lP7k+eKZEjPk3DgyeU9lIXLdeLz0uBbbVp+9Qdow9wJWgwwfg==}
 
@@ -454,6 +481,10 @@ packages:
 
   axios@1.13.6:
     resolution: {integrity: sha512-ChTCHMouEe2kn713WHbQGcuYrr6fXTBiu460OTwWrWob16g1bXn4vtz07Ope7ewMozJAnEquLk5lWQWtBig9DQ==}
+
+  base64-arraybuffer@1.0.2:
+    resolution: {integrity: sha512-I3yl4r9QB5ZRY3XuJVEPfc2XhZO6YweFPI+UovAzn+8/hb3oJ6lnysaFcjVpkCPfVWFUDvoZ8kmVDP7WyRtYtQ==}
+    engines: {node: '>= 0.6.0'}
 
   birpc@2.9.0:
     resolution: {integrity: sha512-KrayHS5pBi69Xi9JmvoqrIgYGDkD6mcSe/i6YKi3w5kekCLzrX4+nawcXqrj2tIp50Kw/mT/s3p+GVK0A0sKxw==}
@@ -656,6 +687,15 @@ packages:
     resolution: {integrity: sha512-2oMpl67a3zCH9H79LeMcbDhXW/UmWG/y2zuqnF2jQq5uq9TbM9TVyXvA4+t+ne2IIkBdrLpAaRQAvo7YI/Yyeg==}
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
     hasBin: true
+
+  rrdom@2.0.0-alpha.20:
+    resolution: {integrity: sha512-hoqjS4662LtBp82qEz9GrqU36UpEmCvTA2Hns3qdF7cklLFFy3G+0Th8hLytJENleHHWxsB5nWJ3eXz5mSRxdQ==}
+
+  rrweb-snapshot@2.0.0-alpha.20:
+    resolution: {integrity: sha512-YTNf9YVeaGRo/jxY3FKBge2c/Ojd/KTHmuWloUSB+oyPXuY73ZeeG873qMMmhIpqEn7hn7aBF1eWEQmP7wjf8A==}
+
+  rrweb@2.0.0-alpha.20:
+    resolution: {integrity: sha512-CZKDlm+j1VA50Ko3gnMbpvguCAleljsTNXPnVk9aeNP8o6T6kolRbISHyDZpqZ4G+bdDLlQOignPP3jEsXs8Gg==}
 
   source-map-js@1.2.1:
     resolution: {integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==}
@@ -929,7 +969,24 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.59.0':
     optional: true
 
+  '@rrweb/record@2.0.0-alpha.20':
+    dependencies:
+      '@rrweb/types': 2.0.0-alpha.20
+      '@rrweb/utils': 2.0.0-alpha.20
+      rrweb: 2.0.0-alpha.20
+
+  '@rrweb/replay@2.0.0-alpha.20':
+    dependencies:
+      '@rrweb/types': 2.0.0-alpha.20
+      rrweb: 2.0.0-alpha.20
+
+  '@rrweb/types@2.0.0-alpha.20': {}
+
+  '@rrweb/utils@2.0.0-alpha.20': {}
+
   '@sxzz/popperjs-es@2.11.8': {}
+
+  '@types/css-font-loading-module@0.0.7': {}
 
   '@types/estree@1.0.8': {}
 
@@ -1040,6 +1097,8 @@ snapshots:
       - '@vue/composition-api'
       - vue
 
+  '@xstate/fsm@1.6.5': {}
+
   async-validator@4.2.5: {}
 
   asynckit@0.4.0: {}
@@ -1051,6 +1110,8 @@ snapshots:
       proxy-from-env: 1.1.0
     transitivePeerDependencies:
       - debug
+
+  base64-arraybuffer@1.0.2: {}
 
   birpc@2.9.0: {}
 
@@ -1285,6 +1346,25 @@ snapshots:
       '@rollup/rollup-win32-x64-gnu': 4.59.0
       '@rollup/rollup-win32-x64-msvc': 4.59.0
       fsevents: 2.3.3
+
+  rrdom@2.0.0-alpha.20:
+    dependencies:
+      rrweb-snapshot: 2.0.0-alpha.20
+
+  rrweb-snapshot@2.0.0-alpha.20:
+    dependencies:
+      postcss: 8.5.6
+
+  rrweb@2.0.0-alpha.20:
+    dependencies:
+      '@rrweb/types': 2.0.0-alpha.20
+      '@rrweb/utils': 2.0.0-alpha.20
+      '@types/css-font-loading-module': 0.0.7
+      '@xstate/fsm': 1.6.5
+      base64-arraybuffer: 1.0.2
+      mitt: 3.0.1
+      rrdom: 2.0.0-alpha.20
+      rrweb-snapshot: 2.0.0-alpha.20
 
   source-map-js@1.2.1: {}
 
